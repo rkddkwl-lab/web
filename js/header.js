@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded",()=>{
     })
 
     //모바일에서 2뎁스 메뉴 나오는 기능
-    const btnMores = document.querySelector(".gnb-smart li .btn-more")
+    const btnMores = document.querySelectorAll(".gnb-smart li .btn-more")
     btnMores.forEach(span=>{
         span.addEventListener('click',()=>{
             span.parentElement.classList.toggle("on")

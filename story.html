@@ -18,8 +18,7 @@
     <!-- swiper js -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
-    
-    <link rel="stylesheet" href="./style/index.css">
+    <link rel="stylesheet" href="./style/story.css">
 </head>
 <body>
     <!-- 스마트 기기에서 보이는 메뉴 -->
@@ -178,252 +177,114 @@
         </div>
     </div>
 
-    <!-- 전체 컨텐츠 -->
     <main>
-        <!-- 히어로배너 -->
-        <!-- Slider main container -->
-        <div class="swiper hero-slider">
-        <!-- Additional required wrapper -->
-            <div class="swiper-wrapper">
-                <!-- Slides -->
-                <div class="swiper-slide">
-                    <img src="./img/slide1-pc.jpg" alt="Lebonheur coffee banner" class="pc">
-                    <img src="./img/slide1-pad.jpg" alt="Lebonheur coffee " class="tab"> 
-                    <img src="./img/slide1-mo.jpg" alt="Lebonheur coffee " class="mo">
-                </div>
-                <div class="swiper-slide">
-                    <img src="./img/slide2-pc.jpg" alt="Lebonheur coffee banner" class="pc">
-                    <img src="./img/slide2-pad.jpg" alt="Lebonheur coffee " class="tab"> 
-                    <img src="./img/slide2.mo.jpg" alt="Lebonheur coffee " class="mo">
-                </div>
-                <div class="swiper-slide">
-                    <img src="./img/slide3-pc.jpg" alt="Lebonheur coffee banner" class="pc">
-                    <img src="./img/slide3-pad.jpg" alt="Lebonheur coffee " class="tab"> 
-                    <img src="./img/slide3-mo.jpg" alt="Lebonheur coffee " class="mo">
-                </div>
-            </div>
-            <div class="pagination"></div>
-        </div>
-        <script>
-            const heroSwiper = new Swiper('.hero-slider', {
-            // Optional parameters
-            // direction: 'vertical',
-            loop: true,
-
-            // If we need pagination
-            pagination: {
-                el: '.pagination',
-            },
-
-            // Navigation arrows
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-
-            // And if we need scrollbar
-            scrollbar: {
-                el: '.swiper-scrollbar',
-            },
-            });
-        </script>
-
-        <div class="story">
+        <!-- story -->
+         <div class="sub-banner">
             <div class="common-frame">
-                <h1>OUR  STORY</h1>
-                <div class="story-frame">
-                    <div class="txt-story">
-                        <h2>Brand Philosophy</h2>
-                        <h4>Brand Meaning</h4>
-                        <p>Le Bonheur는 프랑스어로 ‘행복’을 뜻합니다. <br>
-                           우리는 거창한 특별함이 아닌, 일상 속 자연스러운 <br>
-                           행복을 커피로 전하고자 합니다. <br>
-                           빠른 일상 속, 잠시 멈춰 쉬어갈 수 있는 <br>
-                           커피 한 잔의 여유를 전합니다.</p>
-                    </div>
-                    <figure class="img-story">
-                        <img src="./img/figure.jpg" alt="카페 사진">
-                    </figure>
-                </div>
-                <div class="philo">
-                    <ul class="philo-list">
-                        <li>
-                            <h3>☕ Slow Down</h3>
-                            <div>
-                                <p class="fwb">Slow coffee, even in a fast world.</p>
-                                <p class="fwr">보네르의 커피는 속도를 늦추는 순간을 만듭니다. 바쁘게 흘러가는 하루 속에서도, 커피를 마시는 시간만큼은 서두르지 않아도 괜찮도록. 잠시 멈추고 숨을 고를 수 있는 여유를 담았습니다.</p>
-                            </div>
+                <h1>LE BONHEUR STORY</h1>
+            </div>
+         </div>
+
+         <!-- core value -->
+          <div class="core">
+            <div class="common-frame">
+                <h1>EVERY DAY <br> GENTLY BREWED</h1>
+                <p>LE BONHEUR는 <br>특별한 순간을 위한 커피보다 매일의 일상에 자연스럽게 스며드는 커피를 만듭니다.</p>
+                <div class="swiper core-swiper">
+                    <ul class="core-card swiper-wrapper">
+                        <li class="swiper-slide">
+                            <h4>Brewed for Everyday Moments</h4>
+                            <p class="fwb">하루에 스며드는 커피</p>
+                            <p class="fwr">커피가 하루의 중심이 되기보다 하루의 리듬을 <br>지켜주는 존재가 되기를 바랍니다.</p>
+                            <figure>
+                                <img src="./img/core1.jpg" alt="하루에 스며드는 커피">
+                            </figure>
+                            <ul class="core-check-list">
+                                <li><img src="./img/check.svg" alt="체크">자연광이 들어오는 창가</li>
+                                <li><img src="./img/check.svg" alt="체크">커피잔과 함께 놓인 채그 노트, 작은 식물</li>
+                                <li><img src="./img/check.svg" alt="체크">인물 없는 정적인 라이프스타일 컷</li>
+                            </ul>
+                            <p class="fwm">Le Bonheur는 프랑스어로 ‘행복’을 뜻합니다. <br>보네르는 바쁜 일상 속에서도 <br>잠시 숨을 고르고, 온전히 나에게 집중하는 <br>작은 행복의 순간을 전하고자 합니다.</p>
                         </li>
-                        <li>
-                            <h3>🌿 Everyday Comfort</h3>
-                            <div>
-                                <p class="fwb">Comfortable, everyday coffee.</p>
-                                <p class="fwr">매일 찾게 되는 커피는 특별함보다 편안함이 중요합니다. 강하지도, 자극적이지도 않은 맛으로 하루의 시작부터 끝까지 자연스럽게 어울리는 커피. 보네르는 언제 마셔도 부담 없는 균형을 추구합니다.</p>
-                            </div>
+
+                        <li class="swiper-slide">
+                            <h4>Respect the Process</h4>
+                            <p class="fwb">과정을 담다</p>
+                            <p class="fwr">좋은 커피는 우연이 아니라 <br>과정을 존중하는 태도에서 시작됩니다.</p>
+                            <figure>
+                                <img src="./img/core2.jpg" alt="과정을 담다">
+                            </figure>
+                            <ul class="core-check-list">
+                                <li><img src="./img/check.svg" alt="체크">과정을 존중하는 커피</li>
+                                <li><img src="./img/check.svg" alt="체크">기다림으로 완성되는 맛</li>
+                                <li><img src="./img/check.svg" alt="체크">빠르지 않아 더 정직한 한 잔</li>
+                            </ul>
+                            <p class="fwm">원두의 개성을 이해하고, <br>로스팅의 타이밍을 기다리며, <br>추출의 속도를 조절하는 일까지 르 보네르는 <br>
+                            빠른 결과보다 정직한 과정을 선택합니다.</p>
                         </li>
-                        <li>
-                            <h3>🤍 Warm Balance</h3>
-                            <div>
-                                <p class="fwb">Warm balance in every cup.</p>
-                                <p class="fwr">어느 한쪽으로 치우치지 않은 조화로운 맛.산미는 부드럽게, 고소함은 깊게, 바디감은 따뜻하게 남도록 설계합니다.첫 모금보다 마지막 한 모금이 더 기억에 남는 이유입니다.</p>
-                            </div>
+
+                        <li class="swiper-slide">
+                            <h4>A Space to Slow Down</h4>
+                            <p class="fwb">잠시, 느려도 괜찮아</p>
+                            <p class="fwr">르 보네르는 커피만 파는 공간이 아니라 <br>속도를 잠시 내려놓는 장소입니다.</p>
+                            <figure>
+                                <img src="./img/core3.jpg" alt="잠시 느려도 괜찮아">
+                            </figure>
+                            <ul class="core-check-list">
+                                <li><img src="./img/check.svg" alt="체크">서두르지 않아도 되는 시간</li>
+                                <li><img src="./img/check.svg" alt="체크">머물러도 괜찮은 여백</li>
+                                <li><img src="./img/check.svg" alt="체크">속도를 내려놓는 순간</li>
+                            </ul>
+                            <p class="fwm">르 보네르는 커피를 마시는 시간을 넘어, <br>잠시 속도를 늦추고 나 자신에게 머무를 수 있는 <br>
+                            공간입니다.바쁜 하루의 흐름 속에서 아무것도 <br>
+                            하지 않아도 괜찮은 순간을 건넵니다.</p>
                         </li>
                     </ul>
                 </div>
-            </div>
-        </div>
-
-        <div class="menu-frame signature">
-            <div class="common-frame">
-                <h1>SIGNATURE MENU</h1>
-                <p class="fwm">부드러운 풍미 속에 은은한 단맛이 오래 남는 르 보네르만의 시그니처 커피</p>
-                <div class="swiper signature-menu-slider">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <img src="./img/signature1.jpg" alt="시그니처메뉴1">
-                            <h4>Bonheur blend Coffee</h4>
-                            <p class="fwm">부드러운 산미와 은은한 단맛이 조화를 이루는 대표 블렌드 커피</p>
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="./img/signature2.jpg" alt="시그니처메뉴2">
-                            <h4>Bonheur Latte</h4>
-                            <p class="fwm">깊은 에스프레소에 우유의 밀도를 살린
-                            클래식 시그니처 라떼</p>
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="./img/signature3.jpg" alt="시그니처메뉴3">
-                            <h4>Vanilla Bonheur Latte</h4>
-                            <p class="fwm">부드러운 산미와 은은한 단맛이 조화를
-                            이루는 대표 블렌드 커피</p>
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="./img/signature4.jpg" alt="시그니처메뉴4">
-                            <h4>Bonheur Cold Brew</h4>
-                            <p class="fwm">저온 추출로 완성한 깔끔하고 깊은
-                            풍미의 콜드브루</p>
-                        </div>
-                    </div>
-                </div>
                 <script>
-                    const signatureMenuSlider = new Swiper(".signature-menu-slider",{
+                    const coreSwiper = new Swiper('.core-swiper',{
                         slidesPerView: 1.3,
                         spaceBetween: 14,
                         breakpoints:{
-                            400:{
-                                // 400화면너비보다 클 때
-                                slidesPerView: 2.2,
-                                spaceBetween: 14,
-                            },
                             768:{
-                                // 768화면너비보다 클 때
-                                slidesPerView: 4,
+                                slidesPerView: 3,
                                 spaceBetween: 18,
                             },
                             1440:{
-                                // 1440화면너비보다 클 때
-                                slidesPerView: 4,
+                                slidesPerView: 3,
                                 spaceBetween: 20,
                             }
                         }
                     })
                 </script>
             </div>
-        </div>
+          </div>
 
-        <div class="menu-frame best">
-            <div class="common-frame">
-                <h1>BEST MENU</h1>
-                <p class="fwm">부드러운 풍미로 누구에게나 편안한 르 보네르의 인기 메뉴</p>
-                <div class="swiper best-menu-slider">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <img src="./img/best1.jpg" alt="베스트메뉴1">
-                            <h4>Honey Cream Latte</h4>
-                            <p class="fwm">꿀의 자연스러운 단맛과 크림의
-                            부드러움이 조화로운 인기 메뉴</p>
+          <!-- identity -->
+           <div class="identity">
+                <div class="common-frame">
+                    <h1>Less Loud, More Lasting</h1>
+                    <p>강한 인상보다 오래 남는 여운을 선택합니다.</p>
+                    <figure class="iden-img">
+                        <img src="./img/Frame 34.jpg" alt="르보네르 인테리어 내부">
+                    </figure>
+                    <div class="identity-desc">
+                        <div class="iden-left">
+                            <h5>Made for <br>
+                                Ordinary <br>
+                                Days</h5>
+                            <p>빠르게 소비되는 커피가 아닌 
+                               천천히 음미하는 커피 
+                               첫 모금보다 마지막 한 모금이 더 기억되는 커피</p>    
                         </div>
-                        <div class="swiper-slide">
-                            <img src="./img/best2.jpg" alt="베스트메뉴2">
-                            <h4>Caramel Milk Coffee</h4>
-                            <p class="fwm">쌉싸름한 커피에 카라멜의 달콤함을 더한 균형 잡힌 달달 음료</p>
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="./img/best3.jpg" alt="베스트메뉴3">
-                            <h4>Bonheur Cream Mocha</h4>
-                            <p class="fwm">초콜릿과 커피, 크림이 어우러진 진한
-                            달콤함의 베스트 메뉴</p>
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="./img/best4.jpg" alt="베스트메뉴4">
-                            <h4>Bonheur Milk Choco</h4>
-                            <p class="fwm">커피 없이도 즐길 수 있는 진한 초콜릿
-                            밀크 음료</p>
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="./img/best5.jpg" alt="베스트메뉴5">
-                            <h4>Vanilla Cream Cold Brew</h4>
-                            <p class="fwm">깔끔한 콜드브루 위에 바닐라 크림을 올린 부드러운 단맛의 커피</p>
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="./img/best6.jpg" alt="베스트메뉴6">
-                            <h4>Vanilla Bonheur Latte</h4>
-                            <p class="fwm">은은한 바닐라 향과 부드러운 우유 거품이 어우러진 시그니처 달달 라떼</p>
+                        <div class="iden-right">
+                            <p>르 보네르는 특별한 날을 기다리지 않습니다. <br>아무 일 없는 하루에도 자연스럽게 곁에 놓일 수 있는 커피를 만듭니다. <br> 아침의 시작부터 오후의 짧은 멈춤까지, <br>커피는 조용히 일상의 흐름을 이어줍니다.</p>
+                            <p>빠르게 소비되는 한 잔이 아니라 <br>하루의 리듬에 스며드는 한 모금을 생각합니다. <br>부담 없는 맛과 부드러운 향은 <br>매일 마셔도 지치지 않는 이유가 됩니다.</p>
+                            <p>르 보네르의 커피는 순간을 바꾸려 하지 않습니다. <br>대신, 지금의 시간을 조금 더 편안하게 만듭니다. <br>그렇게 커피는 기억에 남기보다 <br>일상 속에 자연스럽게 머뭅니다.</p>
                         </div>
                     </div>
                 </div>
-                <script>
-                    const bestMenuSlider = new Swiper(".best-menu-slider",{
-                        slidesPerView: 1.3,
-                        spaceBetween: 14,
-                        breakpoints:{
-                            400:{
-                                // 400화면너비보다 클 때
-                                slidesPerView: 2.2,
-                                spaceBetween: 14,
-                            },
-                            768:{
-                                // 768화면너비보다 클 때
-                                slidesPerView: 4,
-                                spaceBetween: 18,
-                            },
-                            1440:{
-                                // 1440화면너비보다 클 때
-                                slidesPerView: 4,
-                                spaceBetween: 20,
-                            }
-                        }
-                    })
-                </script>
-            </div>
-        </div>
-
-        <div class="franchise">
-            <div class="common-frame">
-                <h1>당신의 시작을, Le Bonheur가 함께합니다.</h1>
-                <p class="fwm">검증된 시스템과 감각적인 브랜딩으로 안정적인 창업을 제안합니다.</p>
-                <a href="#" class="btn-style">가맹 상담 신청 <img src="./img/arrow-buuton.svg" alt="바로가기 화살표"></a>
-                <h3> Le Bonheur를 선택해야 하는 이유</h3>
-                <ul class="why">
-                    <li>
-                        <p class="fwb">합리적인 창업 비용</p>
-                        <p class="fwm">초기 투자 부담을 낮춘 현실적인 가맹 모델</p>
-                    </li>
-                    <li>
-                        <p class="fwb">누구에게나 편안한 공간</p>
-                        <p class="fwm">누구나 편안하게 머물 수 있는 공간을 지향</p>
-                    </li>
-                    <li>
-                        <p class="fwb">과정 중심의 커피 철학</p>
-                        <p class="fwm">원두와 추출 과정에 집중한 정직한
-                        커피</p>
-                    </li>
-                    <li>
-                        <p class="fwb">오래 머무는 브랜드 경험</p>
-                        <p class="fwm">단순히 커피 만드는 공간이 아닌 잠시 속도를 내려놓는 커피 경험</p>
-                    </li>
-                </ul>
-            </div>
-        </div>
+           </div>
     </main>
 
     <!-- 푸터 -->
