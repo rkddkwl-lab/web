@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lebonheur</title>
+    <title>상품 상세페이지</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
@@ -13,13 +14,19 @@
     <link rel="stylesheet" href="./style/common.css">
     <link rel="stylesheet" href="./style/header.css">
     <link rel="stylesheet" href="./style/footer.css">
-    
+    <script src="./js/toWon.js"></script>
+    <script src="./js/heart.js"></script>
+    <script src="./js/getParam.js"></script>
     <script src="./js/header.js"></script>
+    
     <!-- swiper js -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
     
-    <link rel="stylesheet" href="./style/index.css">
+    <script src="./js/listArray.js"></script>
+    <script src="./js/detail-recomand.js"></script>
+    <link rel="stylesheet" href="./style/detail.css">
+    <script src="./js/detail.js"></script>
 </head>
 <body>
     <!-- 스마트 기기에서 보이는 메뉴 -->
@@ -100,7 +107,7 @@
         </div>
     </div>
 
-    <!-- pc용 헤더 -->
+       <!-- pc용 헤더 -->
     <header>
         <div class="common-frame">
             <div class="logo">
@@ -178,272 +185,199 @@
         </div>
     </div>
 
-    <!-- 전체 컨텐츠 -->
     <main>
-        <!-- 히어로배너 -->
-        <!-- Slider main container -->
-        <div class="swiper hero-slider">
-        <!-- Additional required wrapper -->
-            <div class="swiper-wrapper">
-                <!-- Slides -->
-                <div class="swiper-slide">
-                    <img src="./img/slide1-pc.jpg" alt="Lebonheur coffee banner" class="pc">
-                    <img src="./img/slide1-pad.jpg" alt="Lebonheur coffee " class="tab"> 
-                    <img src="./img/slide1-mo.jpg" alt="Lebonheur coffee " class="mo">
-                </div>
-                <div class="swiper-slide">
-                    <img src="./img/slide2-pc.jpg" alt="Lebonheur coffee banner" class="pc">
-                    <img src="./img/slide2-pad.jpg" alt="Lebonheur coffee " class="tab"> 
-                    <img src="./img/slide2.mo.jpg" alt="Lebonheur coffee " class="mo">
-                </div>
-                <div class="swiper-slide">
-                    <img src="./img/slide3-pc.jpg" alt="Lebonheur coffee banner" class="pc">
-                    <img src="./img/slide3-pad.jpg" alt="Lebonheur coffee " class="tab"> 
-                    <img src="./img/slide3-mo.jpg" alt="Lebonheur coffee " class="mo">
-                </div>
-            </div>
-            <div class="pagination"></div>
-        </div>
-        <script>
-            const heroSwiper = new Swiper('.hero-slider', {
-            // Optional parameters
-            // direction: 'vertical',
-            loop: true,
+        <div class="product1"></div>
 
-            // If we need pagination
-            pagination: {
-                el: '.pagination',
-            },
-
-            // Navigation arrows
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-
-            // And if we need scrollbar
-            scrollbar: {
-                el: '.swiper-scrollbar',
-            },
-            });
-        </script>
-
-        <div class="story">
-            <div class="common-frame">
-                <h1>OUR  STORY</h1>
-                <div class="story-frame">
-                    <div class="txt-story">
-                        <h2>Brand Philosophy</h2>
-                        <h4>Brand Meaning</h4>
-                        <p>Le Bonheur는 프랑스어로 ‘행복’을 뜻합니다. <br>
-                           우리는 거창한 특별함이 아닌, 일상 속 자연스러운 <br>
-                           행복을 커피로 전하고자 합니다. <br>
-                           빠른 일상 속, 잠시 멈춰 쉬어갈 수 있는 <br>
-                           커피 한 잔의 여유를 전합니다.</p>
-                    </div>
-                    <figure class="img-story">
-                        <img src="./img/figure.jpg" alt="카페 사진">
-                    </figure>
-                </div>
-                <div class="philo">
-                    <ul class="philo-list">
-                        <li>
-                            <h3>☕ Slow Down</h3>
-                            <div>
-                                <p class="fwb">Slow coffee, even in a fast world.</p>
-                                <p class="fwr">보네르의 커피는 속도를 늦추는 순간을 만듭니다. 바쁘게 흘러가는 하루 속에서도, 커피를 마시는 시간만큼은 서두르지 않아도 괜찮도록. 잠시 멈추고 숨을 고를 수 있는 여유를 담았습니다.</p>
-                            </div>
-                        </li>
-                        <li>
-                            <h3>🌿 Everyday Comfort</h3>
-                            <div>
-                                <p class="fwb">Comfortable, everyday coffee.</p>
-                                <p class="fwr">매일 찾게 되는 커피는 특별함보다 편안함이 중요합니다. 강하지도, 자극적이지도 않은 맛으로 하루의 시작부터 끝까지 자연스럽게 어울리는 커피. 보네르는 언제 마셔도 부담 없는 균형을 추구합니다.</p>
-                            </div>
-                        </li>
-                        <li>
-                            <h3>🤍 Warm Balance</h3>
-                            <div>
-                                <p class="fwb">Warm balance in every cup.</p>
-                                <p class="fwr">어느 한쪽으로 치우치지 않은 조화로운 맛.산미는 부드럽게, 고소함은 깊게, 바디감은 따뜻하게 남도록 설계합니다.첫 모금보다 마지막 한 모금이 더 기억에 남는 이유입니다.</p>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+        <div class="common-frame sticky-menu-wrap">
+            <ul class="sticky-menu">
+                <li><a href="#point1">많이 찾는 제품</a></li>
+                <li><a href="#point2">영양 성분</a></li>
+                <li><a href="#point3">리뷰</a></li>
+            </ul>
         </div>
 
-        <div class="menu-frame signature">
+        <div class="recomd-product">
             <div class="common-frame">
-                <h1>SIGNATURE MENU</h1>
-                <p class="fwm">부드러운 풍미 속에 은은한 단맛이 오래 남는 르 보네르만의 시그니처 커피</p>
-                <div class="swiper signature-menu-slider">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
+                <h2 id="point1">많이 찾는 제품</h2>
+                <ul class="list-grid">
+                    <li>
+                        <a href="#">
                             <figure>
-                                <img src="./img/signature1.jpg" alt="시그니처메뉴1">
+                                <img src="./img/signature1.jpg" alt="블랜드 커피">
                             </figure>
+                            <div class="list-option">
+                                <span class="btn-heart">
+                                    <img src="./img/heart.svg" alt="하트">
+                                </span>
+                            </div>
                             <h4>Bonheur blend Coffee</h4>
-                            <p class="fwm">부드러운 산미와 은은한 단맛이 조화를 이루는 대표 블렌드 커피</p>
-                        </div>
-                        <div class="swiper-slide">
-                            <figure>
-                                <img src="./img/signature2.jpg" alt="시그니처메뉴2">
-                            </figure>
-                            <h4>Bonheur Latte</h4>
-                            <p class="fwm">깊은 에스프레소에 우유의 밀도를 살린
-                            클래식 시그니처 라떼</p>
-                        </div>
-                        <div class="swiper-slide">
-                            <figure>
-                                <img src="./img/signature3.jpg" alt="시그니처메뉴3">
-                            </figure>
-                            <h4>Vanilla Bonheur Latte</h4>
                             <p class="fwm">부드러운 산미와 은은한 단맛이 조화를
                             이루는 대표 블렌드 커피</p>
-                        </div>
-                        <div class="swiper-slide">
-                            <figure>
-                                <img src="./img/signature4.jpg" alt="시그니처메뉴4">
-                            </figure>
-                            <h4>Bonheur Cold Brew</h4>
-                            <p class="fwm">저온 추출로 완성한 깔끔하고 깊은
-                            풍미의 콜드브루</p>
-                        </div>
-                    </div>
-                </div>
-                <script>
-                    const signatureMenuSlider = new Swiper(".signature-menu-slider",{
-                        slidesPerView: 1.3,
-                        spaceBetween: 14,
-                        breakpoints:{
-                            400:{
-                                // 400화면너비보다 클 때
-                                slidesPerView: 2.2,
-                                spaceBetween: 14,
-                            },
-                            768:{
-                                // 768화면너비보다 클 때
-                                slidesPerView: 4,
-                                spaceBetween: 18,
-                            },
-                            1440:{
-                                // 1440화면너비보다 클 때
-                                slidesPerView: 4,
-                                spaceBetween: 20,
-                            }
-                        }
-                    })
-                </script>
-            </div>
-        </div>
-
-        <div class="menu-frame best">
-            <div class="common-frame">
-                <h1>BEST MENU</h1>
-                <p class="fwm">부드러운 풍미로 누구에게나 편안한 르 보네르의 인기 메뉴</p>
-                <div class="swiper best-menu-slider">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <figure>
-                                <img src="./img/best1.jpg" alt="베스트메뉴1">
-                            </figure>
-                            <h4>Honey Cream Latte</h4>
-                            <p class="fwm">꿀의 자연스러운 단맛과 크림의
-                            부드러움이 조화로운 인기 메뉴</p>
-                        </div>
-                        <div class="swiper-slide">
-                            <figure>
-                                <img src="./img/best2.jpg" alt="베스트메뉴2">
-                            </figure>
-                            <h4>Caramel Milk Coffee</h4>
-                            <p class="fwm">쌉싸름한 커피에 카라멜의 달콤함을 더한 균형 잡힌 달달 음료</p>
-                        </div>
-                        <div class="swiper-slide">
-                            <figure>
-                                <img src="./img/best3.jpg" alt="베스트메뉴3">
-                            </figure>
-                            <h4>Bonheur Cream Mocha</h4>
-                            <p class="fwm">초콜릿과 커피, 크림이 어우러진 진한
-                            달콤함의 베스트 메뉴</p>
-                        </div>
-                        <div class="swiper-slide">
-                            <figure>
-                                <img src="./img/best4.jpg" alt="베스트메뉴4">
-                            </figure>
-                            <h4>Bonheur Milk Choco</h4>
-                            <p class="fwm">커피 없이도 즐길 수 있는 진한 초콜릿
-                            밀크 음료</p>
-                        </div>
-                        <div class="swiper-slide">
-                            <figure>
-                                <img src="./img/best5.jpg" alt="베스트메뉴5">
-                            </figure>
-                            <h4>Vanilla Cream Cold Brew</h4>
-                            <p class="fwm">깔끔한 콜드브루 위에 바닐라 크림을 올린 부드러운 단맛의 커피</p>
-                        </div>
-                        <div class="swiper-slide">
-                            <figure>
-                                <img src="./img/best6.jpg" alt="베스트메뉴6">
-                            </figure>
-                            <h4>Vanilla Bonheur Latte</h4>
-                            <p class="fwm">은은한 바닐라 향과 부드러운 우유 거품이 어우러진 시그니처 달달 라떼</p>
-                        </div>
-                    </div>
-                </div>
-                <script>
-                    const bestMenuSlider = new Swiper(".best-menu-slider",{
-                        slidesPerView: 1.3,
-                        spaceBetween: 14,
-                        breakpoints:{
-                            400:{
-                                // 400화면너비보다 클 때
-                                slidesPerView: 2.2,
-                                spaceBetween: 14,
-                            },
-                            768:{
-                                // 768화면너비보다 클 때
-                                slidesPerView: 4,
-                                spaceBetween: 18,
-                            },
-                            1440:{
-                                // 1440화면너비보다 클 때
-                                slidesPerView: 4,
-                                spaceBetween: 20,
-                            }
-                        }
-                    })
-                </script>
-            </div>
-        </div>
-
-        <div class="franchise">
-            <div class="common-frame">
-                <h1>당신의 시작을, Le Bonheur가 함께합니다.</h1>
-                <p class="fwm">검증된 시스템과 감각적인 브랜딩으로 안정적인 창업을 제안합니다.</p>
-                <a href="#" class="btn-style">가맹 상담 신청 <img src="./img/arrow-buuton.svg" alt="바로가기 화살표"></a>
-                <h3> Le Bonheur를 선택해야 하는 이유</h3>
-                <ul class="why">
-                    <li>
-                        <p class="fwb">합리적인 창업 비용</p>
-                        <p class="fwm">초기 투자 부담을 낮춘 현실적인 가맹 모델</p>
-                    </li>
-                    <li>
-                        <p class="fwb">누구에게나 편안한 공간</p>
-                        <p class="fwm">누구나 편안하게 머물 수 있는 공간을 지향</p>
-                    </li>
-                    <li>
-                        <p class="fwb">과정 중심의 커피 철학</p>
-                        <p class="fwm">원두와 추출 과정에 집중한 정직한
-                        커피</p>
-                    </li>
-                    <li>
-                        <p class="fwb">오래 머무는 브랜드 경험</p>
-                        <p class="fwm">단순히 커피 만드는 공간이 아닌 잠시 속도를 내려놓는 커피 경험</p>
+                            <div class="price fwb">4.500</div>
+                        </a>
                     </li>
                 </ul>
             </div>
         </div>
+
+        <div class="nutri">
+            <div class="common-frame">
+                <h2 id="point2">영양 성분</h2>
+                <div class="nutri-inner">
+                    <div>
+                        <h3 class="nutri1">Bonheur blend Coffe</h3>
+                        <p>부드러운 산미와 은은한 단맛이 조화를 이루는 대표 블렌드 커피</p>
+                        <table>
+                            <caption>1회 제공량 기준</caption>
+                            <tr>
+                                <th>성분명</th>
+                                <th>함량</th>
+                                <th>비고</th>
+                            </tr>
+                            <tr>
+                                <td class="fwb">칼로리</td>
+                                <td class="fwm">2 ~ 5 kcal</td>
+                                <td class="fwm">거의 무칼로리</td>
+                            </tr>
+                            <tr>
+                                <td class="fwb">탄수화물</td>
+                                <td class="fwm">0.5 ~ 1 g</td>
+                                <td class="fwm">매우 적음</td>
+                            </tr>
+                            <tr>
+                                <td class="fwb">당류</td>
+                                <td class="fwm">0 g</td>
+                                <td class="fwm">무가당 기준</td>
+                            </tr>
+                            <tr>
+                                <td class="fwb">단백질</td>
+                                <td class="fwm">0.1 ~ 0.3 g</td>
+                                <td class="fwm">미량</td>
+                            </tr>
+                            <tr>
+                                <td class="fwb">지방</td>
+                                <td class="fwm">0 g</td>
+                                <td class="fwm">없음</td>
+                            </tr>
+                            <tr>
+                                <td class="fwb">나트륨</td>
+                                <td class="fwm">2 ~ 10 mg</td>
+                                <td class="fwm">매우 적음</td>
+                            </tr>
+                            <tr>
+                                <td class="fwb">카페인</td>
+                                <td class="fwm">80 ~ 120 mg</td>
+                                <td class="fwm">원두/추출에 따라 변동</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="nutri2">
+                        <img src="./img/kacl-cafe.jpg" alt="영양 성분">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="review">
+            <div class="common-frame">
+                <h2 id="point3">리뷰</h2>
+                <div class="review-wrap">
+                    <div class="rev-con">
+                        <div class="rev-user-info">
+                            <h4>coffee_lover92</h4>
+                            <p>2026.03.22</p>
+                            <div class="likes">
+                                <img src="./img/material-symbols_star.svg" alt="별점">
+                                <img src="./img/material-symbols_star.svg" alt="별점">
+                                <img src="./img/material-symbols_star.svg" alt="별점">
+                                <img src="./img/material-symbols_star.svg" alt="별점">
+                                <img src="./img/material-symbols_star.svg" alt="별점">
+                            </div>
+                        </div>
+                        <div class="rev-desc">
+                            <h4>매일 아침의 활력소</h4>
+                            <div class="rev-thumb-list-wrap">
+                                <ul class="rev-thumb-list">
+                                    <li>
+                                        <img src="./img/review-thumb1.jpg" alt="리뷰사진">
+                                    </li>
+                                    <li>
+                                        <img src="./img/review-thumb2.jpg" alt="리뷰사진">
+                                    </li>
+                                    <li>
+                                        <img src="./img/review-thumb3.jpg" alt="리뷰사진">
+                                    </li>
+                                </ul>
+                            </div>
+                            <p>처음 마셨을 때 향이 정말 부드럽게 퍼져서 인상적이었어요. 산미가 강하지 않아서 부담 없이 마시기 좋고, 끝맛이 깔끔하게 떨어지는 게 너무 좋았습니다. 아침에 한 잔 마시면 기분이 차분하게 시작되는 느낌이에요. 특히 쓴맛이 강하지 않아서 커피 잘 못 마시는 사람도 좋아할 것 같아요. 요즘은 다른 커피보다 이거만 찾게 될 정도로 만족하고 있습니다.</p>
+                        </div>
+                    </div>
+
+                    <div class="rev-con">
+                        <div class="rev-user-info">
+                            <h4>dailybrew_kk</h4>
+                            <p>2026.03.20</p>
+                            <div class="likes">
+                                <img src="./img/material-symbols_star.svg" alt="별점">
+                                <img src="./img/material-symbols_star.svg" alt="별점">
+                                <img src="./img/material-symbols_star.svg" alt="별점">
+                                <img src="./img/material-symbols_star.svg" alt="별점">
+                                <img src="./img/material-symbols_star.svg" alt="별점">
+                            </div>
+                        </div>
+                        <div class="rev-desc">
+                            <h4>매일 아침의 활력소</h4>
+                            <div class="rev-thumb-list-wrap">
+                                <ul class="rev-thumb-list">
+                                    <li>
+                                        <img src="./img/review-thumb4.jpg" alt="리뷰사진">
+                                    </li>
+                                    <li>
+                                        <img src="./img/review-thumb5.jpg" alt="리뷰사진">
+                                    </li>
+                                    <li>
+                                        <img src="./img/review-thumb6.jpg" alt="리뷰사진">
+                                    </li>
+                                </ul>
+                            </div>
+                            <p>전체적으로 밸런스가 잘 잡힌 블렌드 커피라고 느꼈어요. 고소한 향이 은은하게 올라오면서도 맛이 과하지 않아서 데일리로 마시기 좋습니다 . 산미가 거의 없어서 호불호 없이 누구나 편하게 즐길 수 있을 것 같아요. 다만 진한 커피를 좋아하는 분들에게는 조금 연하게 느껴질 수도 있을 것 같아요. 그래도 부담 없이 계속 마시기에는 딱 좋은 커피라 재구매 의사 있습니다.</p>
+                        </div>
+                    </div>
+
+                    <div class="rev-con">
+                        <div class="rev-user-info">
+                            <h4>mellow_day</h4>
+                            <p>2026.03.18</p>
+                            <div class="likes">
+                                <img src="./img/material-symbols_star.svg" alt="별점">
+                                <img src="./img/material-symbols_star.svg" alt="별점">
+                                <img src="./img/material-symbols_star.svg" alt="별점">
+                                <img src="./img/material-symbols_star.svg" alt="별점">
+                                <img src="./img/material-symbols_star.svg" alt="별점">
+                            </div>
+                        </div>
+                        <div class="rev-desc">
+                            <h4>매일 아침의 활력소</h4>
+                            <div class="rev-thumb-list-wrap">
+                                <ul class="rev-thumb-list">
+                                    <li>
+                                        <img src="./img/review-thumb7.jpg" alt="리뷰사진">
+                                    </li>
+                                    <li>
+                                        <img src="./img/review-thumb8.jpg" alt="리뷰사진">
+                                    </li>
+                                    <li>
+                                        <img src="./img/review-thumb9.jpg" alt="리뷰사진">
+                                    </li>
+                                </ul>
+                            </div>
+                            <p>르보네르 블렌드 커피는 정말 ‘편안한 커피’라는 느낌이 강해요. 첫 모금부터 부드럽고 따뜻한 느낌이 입안에 퍼지면서 기분이 좋아집니다. 산미와 쓴맛이 적절하게 조화되어 있어서 밸런스가 정말 좋다고 느꼈어요. 오래 마셔도 질리지 않는 맛이라서 작업할 때 항상 옆에 두고 마시고 있어요. 카페 분위기까지 같이 느껴지는 느낌이라 집에서도 카페 감성을 즐길 수 있었습니다.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </main>
 
     <!-- 푸터 -->
