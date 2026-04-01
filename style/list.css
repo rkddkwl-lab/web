@@ -1,6 +1,6 @@
 .sub-banner{
     height: 500px;
-    background: url(../img/bg-list.jpg);
+    background: url(../img/bg-list.jpg) no-repeat 50% 50% / cover;
 }
 .sub-banner .common-frame{
     display: flex;

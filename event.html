@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lebonheur</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style/font.css">
+    <link rel="stylesheet" href="./style/reset.css">
+    <link rel="stylesheet" href="./style/system.css">
+    <link rel="stylesheet" href="./style/common.css">
+    <link rel="stylesheet" href="./style/header.css">
+    <link rel="stylesheet" href="./style/footer.css">
+    <script src="./js/header.js"></script>
+
+    <!-- swiper js -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    
+    <link rel="stylesheet" href="./style/event.css">
+    <script src="./js/include.js"></script>
+</head>
+<body>
+    <div class="include-header"></div>
+
+    <main>
+        <div class="sub-banner">
+            <div class="common-frame">
+                <h1>오늘을 더 특별하게, Le Bonheur</h1>
+            </div>
+        </div>
+        <div class="event1">
+            <div class="common-frame">
+                <h3>이벤트</h3>
+                <p>르보네르와 함께하는 특별한 혜택을 지금 만나보세요</p>
+                <div class="event1-content">
+                    <div class="event1-img-slider">
+                        <div class="swiper event1-img-swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="./img/eventimg.jpg" alt="아메리카노 한 잔을 주문하면 한 잔을 더 드리는 Le Bonheur의 시그니처 혜택">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="./img/eventimg2.jpg" alt="아메리카노 한 잔을 주문하면 한 잔을 더 드리는 Le Bonheur의 시그니처 혜택">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="./img/eventimg3jpg.jpg" alt="아메리카노 한 잔을 주문하면 한 잔을 더 드리는 Le Bonheur의 시그니처 혜택">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="event1-txt-slider">
+                        <div class="swiper event1-txt-swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <h4>1+1 이벤트</h4>
+                                    <p>아메리카노 한 잔을 주문하면 한 잔을 더 드리는 Le Bonheur의 시그니처 혜택</p>
+                                    <p class="b2 fwm">혼자여도 좋고, 함께라면 더 좋은 시간 부담 없이 즐기는 커피 한 잔의 여유를 경험해보세요 매일 마시는 커피, 이제는 더 가볍게 즐기세요</p>
+                                </div>
+                                <div class="swiper-slide">
+                                    <h4>시즌 할인 이벤트</h4>
+                                    <p>시그니처 메뉴 포함
+                                    최대 20% 할인 혜택 제공</p>
+                                    <p class="b2 fwm">계절의 분위기를 담은 르보네르의 시그니처 메뉴를 지금 가장 좋은 가격으로 경험해보세요 가볍게 즐기는 한 잔이 하루의 기분을 바꿉니다</p>
+                                </div>
+                                <div class="swiper-slide">
+                                    <h4>구매 고객 기프트 증정 이벤트</h4>
+                                    <p>일정 금액 이상 구매 시 기프트 증정</p>
+                                    <p class="b2 fwm">단순한 구매를 넘어 작은 즐거움까지 함께 담았습니다 르보네르만의 감성을 담은 선물로 당신의 오늘을 조금 더 특별하게 만들어보세요</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            const event1ImgSlider = new Swiper(".event1-img-swiper",{
+                loop: true,
+                autoplay: {
+                    delay: 2500,
+                    disableOnInteraction: false,
+                },
+                speed:1000
+            })
+            event1ImgSlider.on('slideChange', function(){
+                // console.log(event1ImgSlider.realInddex);
+                event1TxtSlider.slideTo(event1ImgSlider.realIndex,1000)
+            })
+            
+            const event1TxtSlider = new Swiper(".event1-txt-swiper",{
+                effect: "fade",
+                speed:1000
+            })
+        </script>
+    </main>
+
+    <div class="include-footer"></div>
+</body>
+</html>
