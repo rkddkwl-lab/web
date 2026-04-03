@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded",()=>{
                         <dd>${toWon(result.pPrice)}원</dd>
                     </dl>
                     <ul class="btns-buy">
-                        <li><a href="#">
+                        <li><a href="#" class="btn-heart">
                             <img src="./img/heart.svg" alt="관심상품등록">
                             </a>
                         </li>
