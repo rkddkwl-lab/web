@@ -60,3 +60,9 @@
     font-weight: 900;
     font-display: swap;
 }
+.pf{
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}

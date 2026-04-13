@@ -26,6 +26,9 @@
     <script src="./js/include.js"></script>
     
     <link rel="stylesheet" href="./style/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
 </head>
 <body>
     <div id="include-header"></div>
@@ -38,19 +41,25 @@
             <div class="swiper-wrapper">
                 <!-- Slides -->
                 <div class="swiper-slide">
-                    <img src="./img/slide1-pc.jpg" alt="Lebonheur coffee banner" class="pc">
-                    <img src="./img/slide1-pad.jpg" alt="Lebonheur coffee " class="tab"> 
-                    <img src="./img/slide1-mo.jpg" alt="Lebonheur coffee " class="mo">
+                    <a href="./list.html">
+                        <img src="./img/slide1-pc.jpg" alt="Lebonheur coffee banner" class="pc">
+                        <img src="./img/slide1-pad.jpg" alt="Lebonheur coffee " class="tab"> 
+                        <img src="./img/slide1-mo.jpg" alt="Lebonheur coffee " class="mo">
+                    </a>
                 </div>
                 <div class="swiper-slide">
-                    <img src="./img/slide2-pc.jpg" alt="Lebonheur coffee banner" class="pc">
-                    <img src="./img/slide2-pad.jpg" alt="Lebonheur coffee " class="tab"> 
-                    <img src="./img/slide2.mo.jpg" alt="Lebonheur coffee " class="mo">
+                    <a href="./list.html">
+                        <img src="./img/slide2-pc.jpg" alt="Lebonheur coffee banner" class="pc">
+                        <img src="./img/slide2-pad.jpg" alt="Lebonheur coffee " class="tab"> 
+                        <img src="./img/slide2.mo.jpg" alt="Lebonheur coffee " class="mo">
+                    </a>
                 </div>
                 <div class="swiper-slide">
-                    <img src="./img/slide3-pc.jpg" alt="Lebonheur coffee banner" class="pc">
-                    <img src="./img/slide3-pad.jpg" alt="Lebonheur coffee " class="tab"> 
-                    <img src="./img/slide3-mo.jpg" alt="Lebonheur coffee " class="mo">
+                    <a href="./list.html">
+                        <img src="./img/slide3-pc.jpg" alt="Lebonheur coffee banner" class="pc">
+                        <img src="./img/slide3-pad.jpg" alt="Lebonheur coffee " class="tab"> 
+                        <img src="./img/slide3-mo.jpg" alt="Lebonheur coffee " class="mo">
+                    </a>
                 </div>
             </div>
             <div class="pagination"></div>
@@ -64,18 +73,10 @@
             // If we need pagination
             pagination: {
                 el: '.pagination',
+                clickable:true
             },
 
-            // Navigation arrows
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-
-            // And if we need scrollbar
-            scrollbar: {
-                el: '.swiper-scrollbar',
-            },
+           
             });
         </script>
 
