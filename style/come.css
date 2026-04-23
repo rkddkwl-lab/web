@@ -91,8 +91,8 @@
     .come1-content{
         gap: var(--space-normal);
     }
-    .map{
-        width: 710px;
+    .map {
+        width: auto;
         flex: 1;
         aspect-ratio: 3/2;
     }

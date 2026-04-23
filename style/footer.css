@@ -79,7 +79,7 @@ footer{
         gap: var(--space-normal);
     }
     .cinfo-list{
-        grid-template-columns: repeat(4.auto);
+        grid-template-columns: repeat(2,auto);
     }
     .ft3{
         align-items: center;
